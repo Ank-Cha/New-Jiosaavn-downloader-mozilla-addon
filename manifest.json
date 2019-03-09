@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "New-JioSaavn HD(320/128kbps)Songs Downloader",
+  "version": "4.0",
+  "description": "This Extension lets you download songs right from your browser, Download 320kbps and 128kbps High Quality songs without Saavn pro! No need to login :) \n Play the music to be downloaded on www.jiosaavn.com and press Ctrl+z(320kbps) or Ctrl+q(128kbps) \n For more awesome stuff like a chrome extension for jiosaavn that can even download a whole playlist with albumart, Check out my github: https://github.com/Skilled-Coder",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.jiosaavn.com/*"
+      ],
+      "js": [
+        "jquery.js",
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "https://*.saavncdn.com/*",
+    "https://*.jiosaavncdn.com/*",
+    "downloads"
+  ],
+  "author": "Skilled-Coder"
+}
